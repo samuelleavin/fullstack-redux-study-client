@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -65,3 +66,6 @@ typings/
 
 # Serverless directories
 .serverless
+=======
+node_modules
+>>>>>>> 5b2180b5fd4ca72526743ad918b9a4d4961af2b6
