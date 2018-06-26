@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Switch} from 'react-router'
+import {Route, HashRouter} from 'react-router-dom';
+import App from './components/App';
+import Results from './components/Results';
+
+
 import Voting from './components/Voting';
 
-const pair = ['Trainspotting', '28 Days Later'];
+const routes = <Route component={App}>
+  <Route path="/results" component={Results} />
+  <Route path="/" component={Voting} />
+</Route>;
 
-ReactDOM.render(
-    <Voting pair={pair} winner="Trainspotting" />,
-    document.getElementById('app')
-);
+ReactDOM.render((
+	<HashRouter>
+	  <App/>
+	</HashRouter>
+), document.getElementById( 'app' ) )
